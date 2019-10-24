@@ -1,0 +1,51 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Objectivity Regular';
+  text-align: center;
+}
+
+.btn-inline {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-primary;
+  padding-right: 1px;
+  padding-bottom: 6px;
+  padding-left: 1px;
+  border-bottom: 1px solid $color-primary;
+  background-color: transparent;
+  font-size: 19px;
+}
+
+.btn-large {
+  width: 22rem;
+  padding: 1.7rem 0;
+  font-size: 1.8rem;
+  color: $color-white;
+  border: 1px solid $color-white;
+
+}
+
+.btn-small {
+  width: 15rem;
+  padding: 1.2rem 0;
+  font-size: 1.2rem;
+  color: $color-white;
+  
+}
+
+.btn-purple {
+  color: #fff;
+  background-color: $color-primary;
+  border-color: $color-primary;
+  border: 1px solid $color-primary;
+
+}
+
+.btn-outline {
+  color: $color-primary;
+  background-color: transparent;
+  border-color: transparent;
+  border: 1px solid $color-primary;
+
+}

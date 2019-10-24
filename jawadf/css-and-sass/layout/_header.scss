@@ -1,0 +1,30 @@
+.header {
+  background-color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+  padding: 0 15rem;
+
+  &__title {
+    color: $color-white;
+    letter-spacing: 4px;
+    font-size: 2.5rem;
+    font-family: 'Objectivity Thin', sans-serif;
+    font-weight: lighter;
+  }
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 50rem;
+  font-family: 'Objectivity Light', sans-serif;
+  font-size: 1.65rem;
+
+  a {
+    text-decoration: none;
+    color: $color-white;
+  }
+}

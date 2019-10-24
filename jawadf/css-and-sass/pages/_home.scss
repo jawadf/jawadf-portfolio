@@ -1,0 +1,223 @@
+/************************************/
+/*              HERO 
+*************************************/
+
+
+.hero{
+  background-color: $color-primary;
+  height: 90vh;
+  width: 100vw;
+  padding: 15rem 0;
+
+  &__text {
+    & > p:first-child {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__buttons {
+    margin-top: 3rem;
+
+    & > a:first-child {
+      margin-right: 2.5rem;
+    }
+  }
+  
+}
+
+/************************************/
+/*              SUMMARY
+*************************************/
+
+.summary {
+  border: 1px solid $color-primary;
+  background-color: $color-secondary-light;
+  margin-top: -10rem;
+  position: relative;
+  display: flex;
+  width: 85%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  clear: none;
+  align-items: center;
+
+  &__leftside {
+    width: 50%;
+    height: auto;
+    margin-top: 0%;
+    float: left;
+
+  }
+
+  &__leftside-content {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: auto;
+    padding-right: 15%;
+    float: left;
+    color: $color-primary;
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    float: left;
+    font-family: 'Prompt', sans-serif;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-family: 'Objectivity Light', sans-serif;
+    font-weight: lighter;
+    float: left;
+    font-size: 1.8rem;
+    line-height: 30px;
+    font-weight: 300;
+  }
+
+  &__button {
+    margin-top: 2rem;
+    float: left;
+  }
+
+  &__rightside {
+    height: 100%;
+    float:left;
+    width: 50%;
+
+  }
+
+  &__img {
+    display: block;
+    width: 55vh;  
+    height: 60%;
+    margin: 0 auto;
+    //text-align: left;
+   // float: none;
+  }
+
+}
+
+/************************************/
+/*            PORTFOLIO
+*************************************/
+
+.portfolio {
+  padding: 20rem 0;
+  position: relative;
+
+  &__background {
+    color: $color-secondary-super-light;
+    font-size: 185rem;
+    line-height: 1px;
+    position: absolute;
+    left: 75rem;
+    top: 110rem;
+    font-size: 'Objectivity Bold', sans-serif;
+    font-weight: bold;
+    z-index: -10;
+
+
+  }
+
+  &__heading-container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10rem;
+  }
+
+  &__heading {
+    display: block;
+    width: 100%;
+    margin: 0vh auto 0px 0%;
+  }
+
+  &__lists {
+    width: 100%;
+    height: auto;
+  }
+
+  &__list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    &--1 {
+      padding: 10rem 30rem;
+      justify-content: space-between;
+    }
+
+    &--2 {
+      padding: 10rem 2rem;
+      justify-content: space-between;
+    }
+
+    &--3 {
+      padding: 10rem 30rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__project {
+    width: 35rem;
+    color: $color-primary;
+    position: relative;
+
+  }
+
+  &__image {
+    display: block;
+    margin-bottom: 2rem;
+    width: 97%;
+    margin-left: -2.75rem;
+  }
+
+  &__project-title {
+    display: block;
+    margin-bottom: 2rem;
+
+  }
+
+  &__text {
+    font-family: 'Objectivity Light', sans-serif;
+    font-weight: lighter;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    display: block;
+    margin-bottom:  2rem;
+  }
+
+  &__buttons {
+    display: flex;
+
+    a:first-child {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+
+
+}
+
+/************************************/
+/*            CONTACT
+*************************************/
+
+.contact {
+  width: 100%;
+  height: auto;
+  padding: 25rem;
+  background-color: $color-primary;
+  color: $color-white;
+}
+

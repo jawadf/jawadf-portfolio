@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Objectivity Medium';
+  src: url(/vendors/fonts/objectivity.medium.otf);
+}
+
+@font-face {
+  font-family: 'Objectivity Bold';
+  src: url(/vendors/fonts/objectivity.bold.otf);
+}
+
+@font-face {
+  font-family: 'Objectivity Regular';
+  src: url(/vendors/fonts/objectivity.regular.otf);
+}
+
+@font-face {
+  font-family: 'Objectivity Light';
+  src: url(/vendors/fonts/objectivity.light.otf);
+}
+
+@font-face {
+  font-family: 'Objectivity Thin';
+  src: url(/vendors/fonts/objectivity.thin.otf);
+}
+
+body {
+  font-family: 'Objectivity Regular', sans-serif;
+}
+
+.parag {
+  color: $color-white;
+
+  &__small {
+    font-size: 2rem;
+  }
+
+  // &__regular {
+  //   font-size: 1.2rem;
+  // }
+
+  &__large {
+    font-size: 8.5rem;
+    font-weight: 600;
+    font-family: 'Prompt', sans-serif!important;
+    line-height: 1;
+  }
+
+  &__beige {
+    color: $color-secondary;
+  }
+
+  &__thin {
+    font-family: 'Objectivity Thin', sans-serif;
+    font-weight: lighter;
+  }
+}
+
+h2 {
+  padding: 0px 0% 0px 0px;
+  float: none;
+  background-color:transparent;
+  font-family:'Prompt', sans-serif;
+  color: $color-primary;
+  font-size: 6.8rem;
+  line-height: 8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+h4 {
+  padding: 0px 0% 0px 0px;
+  float: none;
+  background-color:transparent;
+  font-family:'Prompt', sans-serif;
+  color: $color-primary;
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+  font-weight: 600;
+}
