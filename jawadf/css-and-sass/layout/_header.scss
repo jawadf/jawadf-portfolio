@@ -6,6 +6,14 @@
   height: 12rem;
   padding: 0 15rem;
 
+  @include respond(little-desktop) {
+    padding: 0 10rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 0 4rem;
+  }
+
   &__title {
     color: $color-white;
     letter-spacing: 4px;
@@ -18,13 +26,65 @@
 .nav {
   list-style: none;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 50rem;
   font-family: 'Objectivity Light', sans-serif;
   font-size: 1.65rem;
 
-  a {
+  @include respond(tab-smaller) {
+    width: 48rem;
+  }
+
+  @include respond(phone-large) {
+    display: none;
+}
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    border: 1px solid #d8d8d848;
+    z-index: -10;
+
+    &:hover {
+      background-color: $color-secondary;
+      border: 1px solid $color-secondary;
+      color: #fff;
+    }
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+    
+
+    & > * {
+      width: 2rem;
+      height: 2rem;
+      display: block;
+      margin: 0 auto;
+      margin-top: 8px;
+    }
+
+    &--github {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-top: 6px!important;
+      z-index: 10;
+    }
+
+
+
+  }
+
+  a:link,
+  a:visited {
     text-decoration: none;
     color: $color-white;
+  }
+
+  a:hover,
+  a:active {
+    color: $color-secondary;
   }
 }

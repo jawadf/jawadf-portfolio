@@ -1,0 +1,185 @@
+.navigation {
+  display: none;
+
+   @include respond(phone-large) {
+       display: block;
+   }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__nav {
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index:15;
+        width: 0;
+        opacity: 0;
+        display: none;
+        transition: opacity .2s;
+      
+    }
+
+    &__button {
+        background-color: transparent;
+        height: 7rem;
+        width: 7rem;
+        position: absolute;
+        top: 1.7rem;
+        right: 6rem;
+        z-index: 2000;
+        text-align: center;
+      
+        cursor: pointer;
+
+  //      @include respond(phone-small) {
+  //          right: 2.8rem;
+  //          top: .9rem;
+  //      } 
+  // //     /*
+  // //     //Media query to bring it back to the corner
+  // //     @include respond(tab-port) {
+  // //         top: 4rem;
+  // //         right: 4rem;
+  // //    }
+
+  // //       */
+
+     }
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width:3.8rem;
+            height: 2px;
+            background-color: $color-white;
+            display: inline-block;
+          
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+        }
+
+        &::before { top: -1rem; }
+        &::after { top: 1rem;  }
+
+    }
+
+    &__list {
+        list-style: none;
+        width: 100%;
+        text-align: center;
+        margin-top: -1rem;
+
+    }
+
+    &__item {
+        margin: 1rem;
+
+    }
+
+  
+    &__link {
+      
+        &:link,
+        &:visited {
+          display: inline-block;
+          font-size: 2rem;
+          padding: 1rem 2rem;
+          color: $color-primary;
+          text-decoration: none;
+          -webkit-transition: all .2s;
+          transition: all .2s;
+    }
+      
+
+        &:hover,
+        &:active {
+            color: $color-primary-light;
+        }
+
+
+    }
+  
+    &__background {
+        width: 0;
+        height: 0;
+        border-radius: 0px;
+        position: absolute;
+        top: 2rem;
+        right: 5.5rem;
+        z-index: 10;
+        opacity: 0;
+        background-color: $color-secondary-light;
+        transition: opacity .2s;
+
+  // //     @include respond(phone-small) {
+  // //         top: 1.5rem;
+  // //         right: 3.2rem;
+  // //     }
+    }
+
+
+  // //FUNCTIONALITY
+    &__checkbox:checked ~ &__background {
+        width: 30rem;
+        height: 23rem;
+        opacity: 1;
+        @include respond(phone-medium) {
+          width: 35rem;
+        }
+
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 16rem;
+        top: 7.6rem; 
+        right: 56%;
+        display: block;
+        @include respond(phone-big) {
+            width: 83%;
+        }
+
+        @include respond(phone-medium) {
+          width: 18rem;
+        }
+
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after{
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        -webkit-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+    }
+
+}

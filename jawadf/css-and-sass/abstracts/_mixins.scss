@@ -5,3 +5,50 @@
         clear: both;
     }
 }
+
+/*
+ORDER: Base + typography > general layout + grid > page layout > components
+
+*/
+
+@mixin respond ($breakpoint) {
+    // @if  $breakpoint == phone-small {
+    //     @media only screen and (max-width: 0em) {@content }; //960px
+    // }
+    @if  $breakpoint == phone-medium {
+         @media only screen and (max-width: 33.125em) {@content }; //530px
+    }
+    @if  $breakpoint == phone-big {
+        @media only screen and (max-width: 43.75em) {@content }; //700px
+    }
+    @if  $breakpoint == phone-large {
+        @media only screen and (max-width: 60em) {@content }; //960px
+    }
+
+    @if  $breakpoint == tab-port {
+        @media only screen and (max-width: 68.75em) {@content }; //1100px
+    }
+
+    @if  $breakpoint == tab-smaller {
+        @media only screen and (max-width: 79.6875em) {@content }; // 1275px
+    }
+
+    @if  $breakpoint == tab-land {
+        @media only screen and (max-width: 86.875em) {@content };//1390px
+    }
+
+    @if  $breakpoint == little-desktop {
+      @media only screen and (max-width: 98.125em) {@content };//1570px
+    }
+
+    @if  $breakpoint == smaller-desktop {
+      @media only screen and (max-width: 113.125em ) {@content };//1810px
+    }
+
+    @if  $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em ) {@content };//1800px
+    }
+
+}
+
+

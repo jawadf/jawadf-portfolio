@@ -20,8 +20,35 @@
           <li class="nav__item"><a href="#">Portfolio</a></li>
           <li class="nav__item"><a href="#">About me</a></li>
           <li class="nav__item"><a href="#">Contact</a></li>
-          <li class="nav__item"><a href="#">LinkedIn</a> <a href="#">Github</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__icon"> 
+              <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Landing" transform="translate(-1114.000000, -55.000000)" fill="#D8D8D8" fill-rule="nonzero">
+                        <path d="M1117.92308,72 L1114.35664,72 L1114.35664,61.3006993 L1117.92308,61.3006993 L1117.92308,72 Z M1116.13986,59.2797203 C1114.95105,59.2797203 1114,58.3286713 1114,57.1398601 C1114,55.951049 1114.95105,55 1116.13986,55 C1117.32867,55 1118.27972,55.951049 1118.27972,57.1398601 C1118.27972,58.3286713 1117.32867,59.2797203 1116.13986,59.2797203 Z M1131,72 L1127.43357,72 L1127.43357,65.6993007 C1127.43357,64.7482984 1126.6014,63.9160839 1125.65035,63.9160839 C1124.6993,63.9160839 1123.86713,64.7482984 1123.86713,65.6993007 L1123.86713,72 L1120.3007,72 L1120.3007,61.3006993 L1123.86713,61.3006993 L1123.86713,62.7272727 C1124.46154,61.7762238 1125.76923,61.0629371 1126.83916,61.0629371 C1129.0979,61.0629371 1131,62.965035 1131,65.2237762 L1131,72 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </svg>
+            </a> 
+            <a href="#" class="nav__icon">
+              <ion-icon class="nav__icon--github"  name="logo-github"></ion-icon>
+            </a>
+          </li>
         </ul>
+        <div class="navigation">
+          <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+          <label for="navi-toggle" class="navigation__button">
+              <span class="navigation__icon">&nbsp;</span>
+          </label>
+          <div class="navigation__background">&nbsp;</div>
+          <nav class="navigation__nav">
+              <ul class="navigation__list">
+                  <li class="navigation__item"><a href="#" class="navigation__link">Portfolio</a></li>
+                  <li class="navigation__item"><a href="#" class="navigation__link">About me</a></li>
+                  <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
       </header>
       <section class="hero">
         <div class="row">
@@ -50,6 +77,7 @@
           </div>
         </div>
         <div class="summary__rightside">
+            <!-- <ion-icon name="attach" class="summary__icon"></ion-icon> -->
           <img class="summary__img" src="./img/linkedin-photo.JPG" alt="Profile Picture">
         </div>        
       </section>
@@ -66,8 +94,8 @@
                   <h4 class="portfolio__project-title">React and Redux blogging app</h4>
                   <p class="portfolio__text">Piszę artykuły, wpisy na blogi, komunikaty, hasła reklamowe, treści na strony www. Wymyślam nazwy dla firm i produktów.</p>
                   <div class="portfolio__buttons">
-                      <a href="#" class="btn btn-purple btn-small"><ion-icon name="open"></ion-icon> Visit Website</a>
-                      <a href="#" class="btn btn-outline btn-small"><ion-icon name="logo-github"></ion-icon> Github Repo</a>
+                      <a href="#" class="btn btn-purple btn-small"><ion-icon class="portfolio__icon" name="open"></ion-icon> Visit Website</a>
+                      <a href="#" class="btn btn-outline btn-small"><ion-icon class="portfolio__icon" name="logo-github"></ion-icon> Github Repo</a>
                   </div>
               </div>
               <div class="portfolio__project">
@@ -75,12 +103,10 @@
                   <h4 class="portfolio__project-title">React and Redux blogging app</h4>
                   <p class="portfolio__text">Piszę artykuły, wpisy na blogi, komunikaty, hasła reklamowe, treści na strony www. Wymyślam nazwy dla firm i produktów.</p>
                   <div class="portfolio__buttons">
-                      <a href="#" class="btn btn-purple btn-small"><ion-icon name="open"></ion-icon> Visit Website</a>
-                      <a href="#" class="btn btn-outline btn-small"><ion-icon name="logo-github"></ion-icon> Github Repo</a>
+                      <a href="#" class="btn btn-purple btn-small"><ion-icon class="portfolio__icon" name="open"></ion-icon> Visit Website</a>
+                      <a href="#" class="btn btn-outline btn-small"><ion-icon class="portfolio__icon" name="logo-github"></ion-icon> Github Repo</a>
                   </div>
               </div>
-              
-              
             </div>
             <div class="portfolio__list portfolio__list--2">
               <div class="portfolio__project">
@@ -88,8 +114,8 @@
                   <h4 class="portfolio__project-title">React and Redux blogging app</h4>
                   <p class="portfolio__text">Piszę artykuły, wpisy na blogi, komunikaty, hasła reklamowe, treści na strony www. Wymyślam nazwy dla firm i produktów.</p>
                   <div class="portfolio__buttons">
-                      <a href="#" class="btn btn-purple btn-small"><ion-icon name="open"></ion-icon> Visit Website</a>
-                      <a href="#" class="btn btn-outline btn-small"><ion-icon name="logo-github"></ion-icon> Github Repo</a>
+                      <a href="#" class="btn btn-purple btn-small"><ion-icon class="portfolio__icon" name="open"></ion-icon> Visit Website</a>
+                      <a href="#" class="btn btn-outline btn-small"><ion-icon class="portfolio__icon" name="logo-github"></ion-icon> Github Repo</a>
                   </div>
               </div>
               <div class="portfolio__project">
@@ -97,22 +123,33 @@
                   <h4 class="portfolio__project-title">React and Redux blogging app</h4>
                   <p class="portfolio__text">Piszę artykuły, wpisy na blogi, komunikaty, hasła reklamowe, treści na strony www. Wymyślam nazwy dla firm i produktów.</p>
                   <div class="portfolio__buttons">
-                      <a href="#" class="btn btn-purple btn-small"><ion-icon name="open"></ion-icon> Visit Website</a>
-                      <a href="#" class="btn btn-outline btn-small"><ion-icon name="logo-github"></ion-icon> Github Repo</a>
+                      <a href="#" class="btn btn-purple btn-small"><ion-icon class="portfolio__icon" name="open"></ion-icon> Visit Website</a>
+                      <a href="#" class="btn btn-outline btn-small"><ion-icon class="portfolio__icon" name="logo-github"></ion-icon> Github Repo</a>
                   </div>
               </div>
-              
+            </div>
+            <div class="portfolio__list portfolio__list--3">
+              <div class="portfolio__project">
+                  <img class="portfolio__image" src="./img/project-img.png" alt="Project">
+                  <h4 class="portfolio__project-title">React and Redux blogging app</h4>
+                  <p class="portfolio__text">Piszę artykuły, wpisy na blogi, komunikaty, hasła reklamowe, treści na strony www. Wymyślam nazwy dla firm i produktów.</p>
+                  <div class="portfolio__buttons">
+                      <a href="#" class="btn btn-purple btn-small"><ion-icon class="portfolio__icon" name="open"></ion-icon> Visit Website</a>
+                      <a href="#" class="btn btn-outline btn-small"><ion-icon class="portfolio__icon" name="logo-github"></ion-icon> Github Repo</a>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="contact">
         <div class="row">
-          <h1>Contact</h1>
+          <p class="contact__heading">Get in touch</p>
+          <p class="contact__heading parag__beige">Drop me a line</p>
           <div class="contact__details">
-            <p>Email: jawadfadel97@gmail.com</p>
-            <p>LinkedIn: linkedin.com/</p>
-            <p>Mobile: +96171643342</p>
+            <p><ion-icon name="mail"></ion-icon>  jawadfadel97@gmail.com</p>
+            <p><ion-icon name="logo-linkedin"></ion-icon>  linkedin.com/in/jawadf</p>
+            <p><ion-icon name="call"></ion-icon>  (961) 71 643 342</p>
           </div>
         </div>
       </section>
@@ -120,7 +157,7 @@
           <div class="row">
               <div class="footer">
                   <div class="footer__column">
-                  <p class="footer__heading">products</p>
+                  <p class="footer__heading">Products</p>
                   <ul class="footer__list">
                       <li class="footer__list-item"><a href="#">Symptom Checker</a></li>
                       <li class="footer__list-item"><a href="#">Call Center Triage</a></li>
@@ -136,7 +173,7 @@
                       </ul>
                   </div>
                   <div class="footer__column">
-                      <p class="footer__heading">developers</p>
+                      <p class="footer__heading">Developers</p>
                       <ul class="footer__list">
                           <li class="footer__list-item"><a href="#">Developer portal</a></li>
                           <li class="footer__list-item"><a href="#">Request an account</a></li>

@@ -1,5 +1,27 @@
 .row {
-    max-width: $grid-width;
-    margin: 0 auto;
+  max-width: 150rem;
+  margin: 0 auto;
+
+  @include respond(smaller-desktop) {
+      max-width: 135rem;
+  }
+
+  @include respond(little-desktop) {
+    max-width: 127rem;
+  }
+
+  @include respond(tab-land) {
+    max-width: 115rem;
+  }
+
+  @include respond(tab-smaller) {
+    max-width: auto;
+    padding: 0 -7rem;
+  }
+
+  @include respond(tab-port) {
+    max-width: auto;
+    padding: 0 4rem;
+  }
 
 }

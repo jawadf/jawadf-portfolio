@@ -36,13 +36,16 @@ body {
 
   // &__regular {
   //   font-size: 1.2rem;
-  // }
+  // } 
 
   &__large {
     font-size: 8.5rem;
     font-weight: 600;
     font-family: 'Prompt', sans-serif!important;
     line-height: 1;
+    @include respond(phone-large) {
+      font-size: 6rem;
+    }
   }
 
   &__beige {
@@ -65,6 +68,9 @@ h2 {
   line-height: 8rem;
   font-weight: 600;
   letter-spacing: 1px;
+  @include respond(phone-large) {
+    font-size: 5.7rem;
+  }
 }
 
 h4 {

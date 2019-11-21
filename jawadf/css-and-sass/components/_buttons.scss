@@ -14,7 +14,10 @@
   padding-left: 1px;
   border-bottom: 1px solid $color-primary;
   background-color: transparent;
-  font-size: 19px;
+  font-size: 1.9rem;
+  @include respond(phone-large) {
+ 
+  }
 }
 
 .btn-large {
@@ -23,29 +26,65 @@
   font-size: 1.8rem;
   color: $color-white;
   border: 1px solid $color-white;
+  &:hover {
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+    font-weight: bolder;
+    color: #fff;
+  }
 
+  @include respond(phone-big) {
+    width: 100%;
+    display: block;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    font-size: 2rem;
+  }
 }
 
 .btn-small {
   width: 15rem;
   padding: 1.2rem 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: $color-white;
-  
+  @include respond(phone-big) {
+    width: 100%;
+    display: block;
+    margin-bottom: 2rem;
+    padding: 1.6rem 0;
+    font-size: 1.8rem;
+  }
 }
 
 .btn-purple {
-  color: #fff;
-  background-color: $color-primary;
-  border-color: $color-primary;
-  border: 1px solid $color-primary;
-
+  &:link,
+  &:visited {
+    color: #fff;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+  &:hover,
+  &:active {
+    background-color: $color-primary-light;
+    border: 1px solid $color-primary-light;
+  }
 }
 
 .btn-outline {
-  color: $color-primary;
-  background-color: transparent;
-  border-color: transparent;
-  border: 1px solid $color-primary;
+
+  &:link,
+  &:visited {
+    color: $color-primary;
+    background-color: transparent;
+    border: 1px solid $color-primary;
+  }
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+  }
+
+ 
 
 }
