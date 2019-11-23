@@ -2,16 +2,17 @@
 /*              HERO 
 *************************************/
 
-
  .hero {
    background-color: $color-primary;
    height: 90vh;
    width: 100vw;
    padding: 15rem 0;
+   @include respond(phone-medium) {
+    padding: 12rem 0 0 0;
+    }
    @include respond(phone-large) {
     height: 80vh;
-  }
-
+    }
 
    &__text {
      & > p:first-child {
@@ -144,19 +145,19 @@
     margin: 0 auto;
     @include respond(smaller-desktop) {
       width: 80%;
-   }
+    }
 
    @include respond(tab-smaller) {
       width: 86%;
-   }
+    }
 
    @include respond(tab-port-smaller) {
       width:47%;
-   }
+    }
 
    @include respond(phone-large) {
     width: 75vw;
-  }
+    }
   }
 
 }
@@ -168,6 +169,9 @@
 .portfolio {
   padding: 20rem 0;
   position: relative;
+  @include respond(phone-large) {
+    padding: 7rem 0;;
+  }
 
 
   &__background {
@@ -176,7 +180,7 @@
     line-height: 1px;
     position: absolute;
     left: 75rem;
-    top: 110rem;
+    top: 150rem;
     font-size: 'Objectivity Bold', sans-serif;
     font-weight: bold;
     z-index: -10;
@@ -208,6 +212,7 @@
     @include respond(little-desktop) {
       padding: 10rem 15rem!important;
     }
+    
     @include respond(tab-port) {
       padding: 7rem 10rem!important;
     }
@@ -229,8 +234,8 @@
     }
 
     &--3 {
-      padding: 10rem 60rem 0 60rem; 
-      justify-content: space-between;
+      padding-top: 10rem; 
+      justify-content: space-around;
     }
   }
 
@@ -256,7 +261,6 @@
     display: block;
     margin-bottom: 2rem;
     width: 97%;
-    margin-left: -2.75rem;
   }
 
   &__project-title {
@@ -294,8 +298,6 @@
     display: inline-block;
     margin-right: 2px;
   }
-
-
 }
 
 /************************************/

@@ -261,11 +261,17 @@ h4 {
   }
 }
 
+.header__logo {
+  width: 12rem;
+  height: 10rem;
+  margin-top: 2rem;
+}
+
 .header__title {
   color: #d8d8d8;
-  letter-spacing: 4px;
-  font-size: 2.5rem;
-  font-family: 'Objectivity Thin', sans-serif;
+  letter-spacing: 3px;
+  font-size: 1.8rem;
+  font-family: 'Exo', sans-serif;
   font-weight: lighter;
 }
 
@@ -349,12 +355,40 @@ h4 {
   margin-bottom: 8rem;
 }
 
-.footer__column:not(:last-child) {
-  margin-right: 8rem;
+@media only screen and (max-width: 43.75em) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 3rem;
+  }
 }
 
-.footer__column:last-child {
+.footer__leftside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__rightside {
   margin-left: auto;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .footer__rightside {
+    margin-left: 0;
+  }
+}
+
+.footer__column {
+  margin-bottom: 3rem;
+}
+
+.footer__column:not(:last-child) {
+  margin-right: 8rem;
 }
 
 .footer__heading {
@@ -618,6 +652,12 @@ h4 {
   padding: 15rem 0;
 }
 
+@media only screen and (max-width: 33.125em) {
+  .hero {
+    padding: 12rem 0 0 0;
+  }
+}
+
 @media only screen and (max-width: 60em) {
   .hero {
     height: 80vh;
@@ -795,13 +835,19 @@ h4 {
   position: relative;
 }
 
+@media only screen and (max-width: 60em) {
+  .portfolio {
+    padding: 7rem 0;
+  }
+}
+
 .portfolio__background {
   color: #fcfaf8;
   font-size: 185rem;
   line-height: 1px;
   position: absolute;
   left: 75rem;
-  top: 110rem;
+  top: 150rem;
   font-size: 'Objectivity Bold', sans-serif;
   font-weight: bold;
   z-index: -10;
@@ -872,10 +918,9 @@ h4 {
 }
 
 .portfolio__list--3 {
-  padding: 10rem 60rem 0 60rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding-top: 10rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .portfolio__project {
@@ -909,7 +954,6 @@ h4 {
   display: block;
   margin-bottom: 2rem;
   width: 97%;
-  margin-left: -2.75rem;
 }
 
 .portfolio__project-title {
