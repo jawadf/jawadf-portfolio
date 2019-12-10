@@ -1,6 +1,8 @@
+.header__title--2 {
+  color: $color-primary!important;
+}
 
-.hero {
-  
+.hero { 
   &__paragraph {
   margin-top: 5rem;
   width: 60%;
@@ -9,12 +11,19 @@
   font-size: 1.8rem;
   line-height: 30px;
   font-weight: 300;
+
+  @include respond(tab-smaller) {
+    font-size: 2.3rem;
+    
+  }
+
   @include respond(phone-large) {
     line-height: 3.6rem;
+    width: 100%;
   }
-  @include respond(phone-medium) {
-    font-size: 2.2rem;
-  }
+  // @include respond(phone-medium) {
+  //   font-size: 2.2rem;
+  // }
 
   }
 
@@ -50,7 +59,14 @@
 }
 
 .hero--2 {
-  height: 100rem!important;
+  height: auto!important;
+
+  @include respond(tab-smaller) {
+    // height: 120rem!important;
+    
+  
+  }
+
 }
 
 .contact-2 {
@@ -71,3 +87,25 @@
     .nav__icon--github-2 {
     color: $color-primary!important;
   }
+
+.navigation{
+
+  &__link--2 {
+      
+    &:link,
+    &:visited {
+      color: $color-secondary!important;
+    } 
+
+    &:hover,
+    &:active {
+      color: $color-secondary-light!important;
+    }
+
+  }
+
+  &__background--2 {
+      background-color: $color-primary!important;
+  }
+
+}

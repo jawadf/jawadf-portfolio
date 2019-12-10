@@ -24,12 +24,17 @@
     margin-top: 2rem;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   &__title {
     color: $color-white;
     letter-spacing: 3px;
     font-size: 1.8rem;
     font-family: 'Exo', sans-serif;
     font-weight: lighter;
+    
    // border-radius: 50%;
     //border: 1px solid $color-white;
     //display: block;

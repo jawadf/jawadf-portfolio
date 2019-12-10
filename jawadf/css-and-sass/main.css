@@ -173,6 +173,10 @@ h4 {
   font-size: 1.9rem;
 }
 
+.btn-inline:hover, .btn-inline:active {
+  color: #6457db;
+}
+
 .btn-large {
   width: 22rem;
   padding: 1.7rem 0;
@@ -222,8 +226,8 @@ h4 {
 }
 
 .btn-purple:hover, .btn-purple:active {
-  background-color: #5447c2;
-  border: 1px solid #5447c2;
+  background-color: #6457db;
+  border: 1px solid #6457db;
 }
 
 .btn-outline:link, .btn-outline:visited {
@@ -273,6 +277,10 @@ h4 {
   width: 12rem;
   height: 10rem;
   margin-top: 2rem;
+}
+
+.header a {
+  text-decoration: none;
 }
 
 .header__title {
@@ -360,7 +368,7 @@ h4 {
 }
 
 .nav__link--2:hover, .nav__link--2:active {
-  color: #5447c2;
+  color: #6457db;
 }
 
 .footer {
@@ -421,6 +429,10 @@ h4 {
 .footer__list-item a {
   text-decoration: none;
   color: #3a337f;
+}
+
+.footer__list-item a:hover, .footer__list-item a:active {
+  color: #6457db;
 }
 
 .footer__list-item:not(:last-child) {
@@ -588,7 +600,7 @@ h4 {
 }
 
 .navigation__link:hover, .navigation__link:active {
-  color: #5447c2;
+  color: #6457db;
 }
 
 .navigation__background {
@@ -1080,6 +1092,10 @@ h4 {
   height: 4rem;
 }
 
+.header__title--2 {
+  color: #3a337f !important;
+}
+
 .hero__paragraph {
   margin-top: 5rem;
   width: 60%;
@@ -1090,15 +1106,16 @@ h4 {
   font-weight: 300;
 }
 
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 79.6875em) {
   .hero__paragraph {
-    line-height: 3.6rem;
+    font-size: 2.3rem;
   }
 }
 
-@media only screen and (max-width: 33.125em) {
+@media only screen and (max-width: 60em) {
   .hero__paragraph {
-    font-size: 2.2rem;
+    line-height: 3.6rem;
+    width: 100%;
   }
 }
 
@@ -1131,7 +1148,7 @@ h4 {
 }
 
 .hero--2 {
-  height: 100rem !important;
+  height: auto !important;
 }
 
 .contact-2 {
@@ -1149,5 +1166,17 @@ h4 {
 
 .nav__icon--github-2 {
   color: #3a337f !important;
+}
+
+.navigation__link--2:link, .navigation__link--2:visited {
+  color: #d9bba7 !important;
+}
+
+.navigation__link--2:hover, .navigation__link--2:active {
+  color: #fcf8f5 !important;
+}
+
+.navigation__background--2 {
+  background-color: #3a337f !important;
 }
 /*# sourceMappingURL=main.css.map */
