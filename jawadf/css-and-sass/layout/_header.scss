@@ -6,6 +6,10 @@
   height: 12rem;
   padding: 0 15rem;
 
+  &--2 {
+    background-color: white!important;
+  }
+
   @include respond(little-desktop) {
     padding: 0 10rem;
   }
@@ -91,14 +95,25 @@
 
   }
 
-  a:link,
-  a:visited {
+  &__link:link,
+  &__link:visited {
     text-decoration: none;
     color: $color-white;
   }
 
-  a:hover,
-  a:active {
+  &__link:hover,
+  &__link:active {
     color: $color-secondary;
+  }
+  
+  &__link--2:link,
+  &__link--2:visited {
+    text-decoration: none;
+    color: $color-primary;
+  }
+
+  &__link--2:hover,
+  &__link--2:active {
+    color: $color-primary-light;
   }
 }

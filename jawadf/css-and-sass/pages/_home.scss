@@ -5,8 +5,13 @@
  .hero {
    background-color: $color-primary;
    height: 90vh;
-   width: 100vw;
+   width: 100%;
    padding: 15rem 0;
+   &--2 {
+    background-color: white!important;
+    height: 140vh!important;
+  }
+
    @include respond(phone-medium) {
     padding: 12rem 0 0 0;
     }
@@ -98,10 +103,7 @@
   }
 
   &__text {
-    font-size: 1.6rem;
-    line-height: 2rem;
     font-family: 'Objectivity Light', sans-serif;
-    font-weight: lighter;
     float: left;
     font-size: 1.8rem;
     line-height: 30px;
@@ -179,8 +181,8 @@
     font-size: 185rem;
     line-height: 1px;
     position: absolute;
-    left: 75rem;
-    top: 150rem;
+    right: 0rem;
+    top: 50rem;
     font-size: 'Objectivity Bold', sans-serif;
     font-weight: bold;
     z-index: -10;

@@ -27,6 +27,7 @@ body {
   font-family: 'Objectivity Regular', sans-serif;
 }
 
+
 .parag {
   color: $color-white;
 
@@ -34,9 +35,9 @@ body {
     font-size: 2rem;
   }
 
-  // &__regular {
-  //   font-size: 1.2rem;
-  // } 
+  &__purple {
+    color: $color-primary;
+  } 
 
   &__large {
     font-size: 8.5rem;

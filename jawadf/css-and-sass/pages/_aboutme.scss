@@ -1,0 +1,55 @@
+
+.hero {
+  
+  &__paragraph {
+  margin-top: 5rem;
+  width: 60%;
+  color: $color-primary;
+  font-family: 'Objectivity Light', sans-serif;
+  font-size: 1.8rem;
+  line-height: 30px;
+  font-weight: 300;
+  @include respond(phone-large) {
+    line-height: 3.6rem;
+  }
+  @include respond(phone-medium) {
+    font-size: 2.2rem;
+  }
+
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 5rem;
+    
+
+    &-heading {
+      font-size: 3.5rem;
+      margin-top: 7rem;
+      display: block;
+      margin-bottom: 20px;
+      font-family: 'Prompt', sans-serif;
+      line-height: 4rem;
+      font-weight: 500;
+    }
+
+
+    &-item {
+      display: flex;
+      margin-bottom: 2rem;
+
+      ion-icon {
+        margin-right: 2rem;
+        font-size: 4rem;
+        margin-top: -5px;
+      }
+    }
+
+
+  }
+}
+
+.contact-2 {
+  background-color: #fff;
+  color: $color-primary;
+}
