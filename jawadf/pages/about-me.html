@@ -20,19 +20,19 @@
         <ul class="nav">
           <li class="nav__item"><a class="nav__link--2" href="../index.html">Portfolio</a></li>
           <li class="nav__item"><a class="nav__link--2" href="#">About me</a></li>
-          <li class="nav__item"><a class="nav__link--2" href="#">Contact</a></li>
+          <li class="nav__item"><a class="nav__link--2" href="#section-contact">Contact</a></li>
           <li class="nav__item">
-            <a href="#" class="nav__icon"> 
+            <a href="#" class="nav__icon nav__icon--2"> 
               <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Landing" transform="translate(-1114.000000, -55.000000)" fill="#D8D8D8" fill-rule="nonzero">
+                    <g id="Landing" transform="translate(-1114.000000, -55.000000)" fill="#3a337f" fill-rule="nonzero">
                         <path d="M1117.92308,72 L1114.35664,72 L1114.35664,61.3006993 L1117.92308,61.3006993 L1117.92308,72 Z M1116.13986,59.2797203 C1114.95105,59.2797203 1114,58.3286713 1114,57.1398601 C1114,55.951049 1114.95105,55 1116.13986,55 C1117.32867,55 1118.27972,55.951049 1118.27972,57.1398601 C1118.27972,58.3286713 1117.32867,59.2797203 1116.13986,59.2797203 Z M1131,72 L1127.43357,72 L1127.43357,65.6993007 C1127.43357,64.7482984 1126.6014,63.9160839 1125.65035,63.9160839 C1124.6993,63.9160839 1123.86713,64.7482984 1123.86713,65.6993007 L1123.86713,72 L1120.3007,72 L1120.3007,61.3006993 L1123.86713,61.3006993 L1123.86713,62.7272727 C1124.46154,61.7762238 1125.76923,61.0629371 1126.83916,61.0629371 C1129.0979,61.0629371 1131,62.965035 1131,65.2237762 L1131,72 Z" id="Shape"></path>
                     </g>
                 </g>
             </svg>
             </a> 
-            <a href="#" class="nav__icon">
-              <ion-icon class="nav__icon--github"  name="logo-github"></ion-icon>
+            <a href="#" class="nav__icon nav__icon--2">
+              <ion-icon class="nav__icon--github nav__icon--github-2 "  name="logo-github"></ion-icon>
             </a>
           </li>
         </ul>
@@ -46,7 +46,7 @@
               <ul class="navigation__list">
                   <li class="navigation__item"><a href="#" class="navigation__link">Portfolio</a></li>
                   <li class="navigation__item"><a href="#" class="navigation__link">About me</a></li>
-                  <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+                  <li class="navigation__item"><a href="#section-contact" class="navigation__link">Contact</a></li>
               </ul>
           </nav>
       </div>
@@ -89,7 +89,7 @@
           </div>
         </div> 
       </section>
-      <section class="contact contact-2">
+      <section class="contact contact-2" id="section-contact">
         <div class="row">
           <p class="contact__heading">Get in touch</p>
           <p class="contact__heading parag__beige">Drop me a line</p>
@@ -105,7 +105,7 @@
               <div class="footer">
                 <div class="footer__leftside">
                     <div class="footer__column">
-                        <p class="footer__heading">Products</p>
+                        <p class="footer__heading">Links</p>
                         <ul class="footer__list">
                             <li class="footer__list-item"><a href="#">Symptom Checker</a></li>
                             <li class="footer__list-item"><a href="#">Call Center Triage</a></li>
@@ -113,7 +113,7 @@
                         </ul>
                         </div>
                         <div class="footer__column">
-                            <p class="footer__heading">Company</p>
+                            <p class="footer__heading">Main Projects</p>
                             <ul class="footer__list">
                                 <li class="footer__list-item"><a href="#">Blog</a></li>
                                 <li class="footer__list-item"><a href="#">Careers</a></li>
@@ -121,32 +121,59 @@
                             </ul>
                         </div>
                         <div class="footer__column">
-                            <p class="footer__heading">Developers</p>
+                            <p class="footer__heading">Other Projects</p>
                             <ul class="footer__list">
                                 <li class="footer__list-item"><a href="#">Developer portal</a></li>
                                 <li class="footer__list-item"><a href="#">Request an account</a></li>
                                 <li class="footer__list-item"><a href="#">Documentation</a></li>
                                 <li class="footer__list-item"><a href="#">API reference</a></li>
-                                <li class="footer__list-item"><a href="#">API status</a></li>
                             </ul>
                         </div>
                 </div>
                 <div class="footer__rightside">
                     <div class="footer__column">
-                        <a href="#" class="footer__social facebook"></a>
-                        <a href="#" class="footer__social twitter"></a>
-                        <a href="#" class="footer__social linkedin"></a>
-                        <a href="#" class="footer__social youtube"></a>
+                      <a href="#" class="footer__social linkedin"></a>
+                      <a href="#" class=" footer__social--2">
+                          <ion-icon class="github"  name="logo-github"></ion-icon>
+                      </a>
                     </div>
                 </div>
               </div>
               <div class="legal">
-                  <p>&copy; Infermedica 2012-2019</p>
+                  <p>&copy; jawadf 2019</p>
               </div>
           </div>
       </footer>
       
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+           <!--Smooth Scrolling effect polyfill-->
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+           <script>
+           $(document).ready(function(){
+             // Add smooth scrolling to all links
+             $("a").on('click', function(event) {
+           
+               // Make sure this.hash has a value before overriding default behavior
+               if (this.hash !== "") {
+                 // Prevent default anchor click behavior
+                 event.preventDefault();
+           
+                 // Store hash
+                 var hash = this.hash;
+           
+                 // Using jQuery's animate() method to add smooth page scroll
+                 // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                 $('html, body').animate({
+                   scrollTop: $(hash).offset().top
+                 }, 800, function(){
+           
+                   // Add hash (#) to URL when done scrolling (default click behavior)
+                   window.location.hash = hash;
+                 });
+               } // End if
+             });
+           });
+           </script> 
     </body>
 
 </html>
