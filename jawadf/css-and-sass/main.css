@@ -2,6 +2,31 @@
 ORDER: Base + typography > general layout + grid > page layout > components
 
 */
+@-webkit-keyframes fadeinup {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes fadeinup {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -960,6 +985,7 @@ h4 {
   width: 35rem;
   color: #3a337f;
   position: relative;
+  opacity: 0;
 }
 
 @media only screen and (max-width: 60em) {
@@ -1096,35 +1122,75 @@ h4 {
   color: #3a337f !important;
 }
 
-.hero__paragraph {
-  margin-top: 5rem;
-  width: 60%;
+.info {
+  padding-top: 13rem;
   color: #3a337f;
   font-family: 'Objectivity Light', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 30px;
   font-weight: 300;
 }
 
+.info__card {
+  -webkit-animation-name: fadeinup;
+          animation-name: fadeinup;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.info__list {
+  opacity: 0;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.info__cents {
+  margin-bottom: 13rem;
+}
+
+.info__aboutme {
+  margin: 5rem 0 17rem 0;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__aboutme > * {
+  width: 30%;
+  margin-right: 5rem;
+}
+
+.info__aboutme ion-icon {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 3rem;
+}
+
 @media only screen and (max-width: 79.6875em) {
-  .hero__paragraph {
+  .info__aboutme {
     font-size: 2.3rem;
   }
 }
 
 @media only screen and (max-width: 60em) {
-  .hero__paragraph {
+  .info__aboutme {
     line-height: 3.6rem;
     width: 100%;
   }
 }
 
-.hero__list {
+.info__technical {
+  display: block;
+  margin-bottom: 8.6rem;
+}
+
+.info__list {
   list-style: none;
   margin-top: 5rem;
 }
 
-.hero__list-heading {
+.info__list-heading {
   font-size: 3.5rem;
   margin-top: 7rem;
   display: block;
@@ -1134,20 +1200,20 @@ h4 {
   font-weight: 500;
 }
 
-.hero__list-item {
+.info__list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 2rem;
 }
 
-.hero__list-item ion-icon {
+.info__list-item ion-icon {
   margin-right: 2rem;
   font-size: 4rem;
   margin-top: -5px;
 }
 
-.hero--2 {
+.info--2 {
   height: auto !important;
 }
 
@@ -1179,4 +1245,120 @@ h4 {
 .navigation__background--2 {
   background-color: #3a337f !important;
 }
+
+/**
+
+.header__title--2 {
+  color: $color-primary!important;
+}
+
+.hero { 
+  &__paragraph {
+  margin-top: 5rem;
+  width: 60%;
+  color: $color-primary;
+  font-family: 'Objectivity Light', sans-serif;
+  font-size: 1.8rem;
+  line-height: 30px;
+  font-weight: 300;
+
+  @include respond(tab-smaller) {
+    font-size: 2.3rem;
+    
+  }
+
+  @include respond(phone-large) {
+    line-height: 3.6rem;
+    width: 100%;
+  }
+  // @include respond(phone-medium) {
+  //   font-size: 2.2rem;
+  // }
+
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 5rem;
+    
+
+    &-heading {
+      font-size: 3.5rem;
+      margin-top: 7rem;
+      display: block;
+      margin-bottom: 20px;
+      font-family: 'Prompt', sans-serif;
+      line-height: 4rem;
+      font-weight: 500;
+    }
+
+
+    &-item {
+      display: flex;
+      margin-bottom: 2rem;
+
+      ion-icon {
+        margin-right: 2rem;
+        font-size: 4rem;
+        margin-top: -5px;
+      }
+    }
+
+
+  }
+}
+
+.hero--2 {
+  height: auto!important;
+
+  @include respond(tab-smaller) {
+    // height: 120rem!important;
+    
+  
+  }
+
+}
+
+.contact-2 {
+  background-color: #fff;
+  color: $color-primary;
+}
+
+.nav__icon--2 {
+  border: 1px solid $color-primary!important;
+
+  &:hover,
+  &:active {
+    border: 1px solid $color-secondary!important;
+  }
+}
+
+
+    .nav__icon--github-2 {
+    color: $color-primary!important;
+  }
+
+.navigation{
+
+  &__link--2 {
+      
+    &:link,
+    &:visited {
+      color: $color-secondary!important;
+    } 
+
+    &:hover,
+    &:active {
+      color: $color-secondary-light!important;
+    }
+
+  }
+
+  &__background--2 {
+      background-color: $color-primary!important;
+  }
+
+}
+
+**/
 /*# sourceMappingURL=main.css.map */

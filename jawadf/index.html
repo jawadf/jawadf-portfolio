@@ -79,7 +79,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet mi at lacus semper porttitor. Sed semper ante vehicula orci faucibus. Duis dapibus quis ante vitae convallis. Integer vitae diam vel diam tincidunt tristique in sit amet lacus. Duis dapibus quis ante vitae convallis.
               </p> -->
               <p class="summary__text">
-                Motivated by learning and aquiring new skills, has taken the (almost) self-taught journey to become a web developer. After a few months of studying at a bootcamp and building personal projects, has started doing an internship as a full-stack developer at a local company . . .
+                Motivated by learning and aquiring new skills, has taken the (almost) self-taught journey to become a web developer. After several months of practicing, building personal projects and studying at a bootcamp, has started doing an internship as a full-stack developer at a local company . . .
               </p>
               <a href="./pages/about-me.html" class="summary__button btn-inline">Learn more</a>
           </div>
@@ -108,7 +108,7 @@
               </div>
               <div class="portfolio__project">
                   <img class="portfolio__image" src="./img/mhjn.png" alt="Project">
-                  <h4 class="portfolio__project-title">React and Redux blogging app</h4>
+                  <h4 class="portfolio__project-title">TypeScript, React and Redux Ecommerce App</h4>
                   <p class="portfolio__text">Piszę artykuły, wpisy na blogi, komunikaty, hasła reklamowe, treści na strony www. Wymyślam nazwy dla firm i produktów.</p>
                   <div class="portfolio__buttons">
                       <a href="#" class="btn btn-purple btn-small"><ion-icon class="portfolio__icon" name="open"></ion-icon> Visit Website</a>
@@ -119,7 +119,7 @@
             <div class="portfolio__list portfolio__list--2">
               <div class="portfolio__project">
                   <img class="portfolio__image" src="./img/mhjn.png" alt="Project">
-                  <h4 class="portfolio__project-title">React and Redux blogging app</h4>
+                  <h4 class="portfolio__project-title">React Hooks: Quick Mahjong Game</h4>
                   <p class="portfolio__text">Piszę artykuły, wpisy na blogi, komunikaty, hasła reklamowe, treści na strony www. Wymyślam nazwy dla firm i produktów.</p>
                   <div class="portfolio__buttons">
                       <a href="#" class="btn btn-purple btn-small"><ion-icon class="portfolio__icon" name="open"></ion-icon> Visit Website</a>
@@ -128,7 +128,7 @@
               </div>
               <div class="portfolio__project">
                   <img class="portfolio__image" src="./img/quiz.png" alt="Project">
-                  <h4 class="portfolio__project-title">React and Redux blogging app</h4>
+                  <h4 class="portfolio__project-title">JavaScript Quiz Game</h4>
                   <p class="portfolio__text">Piszę artykuły, wpisy na blogi, komunikaty, hasła reklamowe, treści na strony www. Wymyślam nazwy dla firm i produktów.</p>
                   <div class="portfolio__buttons">
                       <a href="#" class="btn btn-purple btn-small"><ion-icon class="portfolio__icon" name="open"></ion-icon> Visit Website</a>
@@ -139,7 +139,7 @@
             <div class="portfolio__list portfolio__list--3">
               <div class="portfolio__project">
                   <img class="portfolio__image" src="./img/izabet.png" alt="Project">
-                  <h4 class="portfolio__project-title">React and Redux blogging app</h4>
+                  <h4 class="portfolio__project-title">React Native and Redux Mobile app</h4>
                   <p class="portfolio__text">Piszę artykuły, wpisy na blogi, komunikaty, hasła reklamowe, treści na strony www. Wymyślam nazwy dla firm i produktów.</p>
                   <div class="portfolio__buttons">
                       <a href="#" class="btn btn-purple btn-small"><ion-icon class="portfolio__icon" name="open"></ion-icon> Visit Website</a>
@@ -211,28 +211,44 @@
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
            <script>
            $(document).ready(function(){
+
+            /*********************  Fade in on Scroll  ***************************/
+             /* Every time the window is scrolled ... */
+             $(window).scroll( function(){
+                
+                /* Check the location of each desired element */
+                $('.portfolio__project').each( function(i){
+                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    /* If the object is completely visible in the window, fade it it */
+                    if( bottom_of_window > bottom_of_object ){
+                        $(this).animate({'opacity':'1'}, 500);
+                    }
+                }); 
+            });
+            /**************************************************************************/
+
+
+             /**************************** Smooth Scrolling ****************************/
              // Add smooth scrolling to all links
              $("a").on('click', function(event) {
-           
                // Make sure this.hash has a value before overriding default behavior
                if (this.hash !== "") {
                  // Prevent default anchor click behavior
                  event.preventDefault();
-           
                  // Store hash
                  var hash = this.hash;
-           
                  // Using jQuery's animate() method to add smooth page scroll
                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                  $('html, body').animate({
                    scrollTop: $(hash).offset().top
                  }, 800, function(){
-           
                    // Add hash (#) to URL when done scrolling (default click behavior)
                    window.location.hash = hash;
                  });
                } // End if
              });
+            /**************************************************************************/
            });
            </script> 
     </body>

@@ -51,55 +51,63 @@
           </nav>
       </div>
       </header>
-      <section class="hero hero--2">
+      <section class="info info--2">
         <div class="row">
-          <div class="hero__text">
-              <p class="parag__purple parag__large">Two cents about me.</p>
-              <div class="hero__paragraph">
-                Motivated by learning and aquiring new skills, has taken the (almost) self-taught journey to become a web developer. After a few months of studying at a bootcamp and building personal projects, has started doing an internship as a full-stack developer at a local company. 
-                <br /> 
-                <br /> 
-                Has developed a genuine interest in ensuring the attractiveness and good perfomance of user interfaces, and decided to take on a journey of continous learning to further develop my ability to build high quality interfaces, on par with market standards.
-                <br />
-                <br />
-                Completed my Bachelor's degree in Applied Economics at LU in Beirut. It was during my university years that I was introduced to web development and started coding. However, my enthusiasm and curiosity for learning is not limited to the technology field, as I have also learned about 4 to 5 foreign languages (including Dutch, Japanese and German) by myself using books.
-                <br />
-                <br />
+          <div class="info__text">
+              <p class="parag__purple parag__large info__cents">Two cents about me.</p>
+              <div class="info__aboutme">
+                <div class="info__card">
+                  <ion-icon name="bulb"></ion-icon>
+                  <p class="info__card-text">Motivated by learning and aquiring new skills, has taken the (almost) self-taught journey to become a web developer. After several months of practicing, building personal projects and studying at a bootcamp, has started doing an internship as a full-stack developer at a local company.</p>
+                </div>
+                <div class="info__card">
+                  <ion-icon name="desktop"></ion-icon> 
+                  <p class="info__card-text">Has developed a genuine interest in ensuring the attractiveness and good perfomance of user interfaces, and decided to take on a journey of continous learning to further develop my ability to build high quality interfaces, on par with market standards.</p>
+                </div>
+                <div class="info__card">
+                  <ion-icon name="school"></ion-icon> 
+                  <p class="info__card-text">Completed my Bachelor's degree in Applied Economics at LU in Beirut. It was during my university years that I was introduced to web development and started coding. However, my enthusiasm and curiosity for learning is not limited to the technology field, as I have also learned about 4 to 5 foreign languages (including Dutch, Japanese and German) by myself using books.</p>
+                </div>
+              </div>
 
-                <h2 class="parag__purple">The more technical side of things.</h2>
+          
+                
+               <div class="info__new-row">
+
+                <h2 class="parag__purple info__technical">The more technical side of things.</h2>
               
-                <!-- <h3 class="hero__list-heading">Heading for the list</h3 class="hero__list-heading"> -->
-                <ul class="hero__list">
-                    <li class="hero__list-item">
+                <!-- <h3 class="info__list-heading">Heading for the list</h3 class="info__list-heading"> -->
+                <ul class="info__list">
+                    <li class="info__list-item">
                         <ion-icon name="arrow-dropright"></ion-icon>
                         <span>Solid grasp of React, Redux and React Native, with vast experience using them on the front end</span>
                     </li>
-                    <li class="hero__list-item">
+                    <li class="info__list-item">
                         <ion-icon name="arrow-dropright"></ion-icon>
                         <span>Expert-level CSS and HTML, as well as Flexbox and preprocessors such as SASS</span>
                     </li>
-                    <li class="hero__list-item">
+                    <li class="info__list-item">
                         <ion-icon name="arrow-dropright"></ion-icon>
                         <span>Great knowledge of TypeScript and ES6+, and ability to build web apps with vanilla JavaScript only, without any framework or library</span>
                     </li>
-                    <li class="hero__list-item">
+                    <li class="info__list-item">
                         <ion-icon name="arrow-dropright"></ion-icon>
-                        <span>Consuming RESTful APIs</span>
+                        <span>Extensive experience with backend development using the 'Symfony' framework (PHP), and working with databases and MySQL</span>
                     </li>
-                    <li class="hero__list-item">
+                    <li class="info__list-item">
                         <ion-icon name="arrow-dropright"></ion-icon>
-                        <span>Extensive experience with backend development using the 'Symfony' framework (PHP), as well as MySQL</span>
+                        <span>Solid acquisition, in theory and practice, of core software development concepts and patterns such as OOP and MVC</span>
                     </li>
-                    <li class="hero__list-item">
+                    <li class="info__list-item">
                         <ion-icon name="arrow-dropright"></ion-icon>
-                        <span>Solid acquisition of patterns and concepts OOP, MVC</span>
+                        <span>Working with RESTful APIs</span>
                     </li>
-                    <li class="hero__list-item">
+                    <li class="info__list-item">
                         <ion-icon name="arrow-dropright"></ion-icon>
-                        <span>Knowledge of most Linux commands, terminal (shell)</span>
+                        <span>Experience working with Linux and knowledge of common Linux commands</span>
                     </li>
                   </ul>
-            </div>
+            </div></div>
           </div>
         </div> 
       </section>
@@ -164,28 +172,45 @@
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
            <script>
            $(document).ready(function(){
+
+             /*********************  Fade in on Scroll  ***************************/
+             /* Every time the window is scrolled ... */
+             $(window).scroll( function(){
+                
+                /* Check the location of each desired element */
+                $('.info__list').each( function(i){
+                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    /* If the object is completely visible in the window, fade it it */
+                    if( bottom_of_window > bottom_of_object ){
+                        $(this).animate({'opacity':'1'}, 500);
+                    }
+                }); 
+            });
+            /**************************************************************************/
+
+
+            /**************************** Smooth Scrolling ****************************/
              // Add smooth scrolling to all links
              $("a").on('click', function(event) {
-           
                // Make sure this.hash has a value before overriding default behavior
                if (this.hash !== "") {
                  // Prevent default anchor click behavior
                  event.preventDefault();
-           
                  // Store hash
                  var hash = this.hash;
-           
                  // Using jQuery's animate() method to add smooth page scroll
                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                  $('html, body').animate({
                    scrollTop: $(hash).offset().top
                  }, 800, function(){
-           
                    // Add hash (#) to URL when done scrolling (default click behavior)
                    window.location.hash = hash;
                  });
                } // End if
              });
+            /**************************************************************************/
+ 
            });
            </script> 
     </body>

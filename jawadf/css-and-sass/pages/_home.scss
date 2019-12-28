@@ -260,6 +260,8 @@
     width: 35rem;
     color: $color-primary;
     position: relative;
+    opacity: 0;
+
     @include respond(phone-large) {
       margin-bottom: 10rem;
       width: 46%;

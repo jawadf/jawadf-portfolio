@@ -2,6 +2,149 @@
   color: $color-primary!important;
 }
 
+.info {
+  padding-top: 13rem;
+  color: $color-primary;
+  font-family: 'Objectivity Light', sans-serif;
+  font-size: 1.6rem;
+  line-height: 30px;
+  font-weight: 300;
+
+  &__card {
+    animation-name: fadeinup;
+    animation-duration: 1s;
+  }
+
+  &__list {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  
+  &__cents {
+    margin-bottom: 13rem;
+  }
+  
+  &__aboutme {
+  margin: 5rem 0 17rem 0;
+  width: 80%;
+  display: flex;
+
+  & > * {
+    width: 30%;
+    margin-right: 5rem;
+  }
+
+  ion-icon {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  @include respond(tab-smaller) {
+    font-size: 2.3rem;
+    
+  }
+
+  @include respond(phone-large) {
+    line-height: 3.6rem;
+    width: 100%;
+  }
+  // @include respond(phone-medium) {
+  //   font-size: 2.2rem;
+  // }
+
+  }
+
+  &__technical {
+    display: block;
+    margin-bottom: 8.6rem;
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 5rem;
+    
+
+    &-heading {
+      font-size: 3.5rem;
+      margin-top: 7rem;
+      display: block;
+      margin-bottom: 20px;
+      font-family: 'Prompt', sans-serif;
+      line-height: 4rem;
+      font-weight: 500;
+    }
+
+
+    &-item {
+      display: flex;
+      margin-bottom: 2rem;
+
+      ion-icon {
+        margin-right: 2rem;
+        font-size: 4rem;
+        margin-top: -5px;
+      }
+    }
+
+  }
+}
+
+.info--2 {
+  height: auto!important;
+
+  @include respond(tab-smaller) {
+    // height: 120rem!important;
+  }
+}
+
+.contact-2 {
+  background-color: #fff;
+  color: $color-primary;
+}
+
+.nav__icon--2 {
+  border: 1px solid $color-primary!important;
+
+  &:hover,
+  &:active {
+    border: 1px solid $color-secondary!important;
+  }
+}
+
+    .nav__icon--github-2 {
+    color: $color-primary!important;
+  }
+
+.navigation{
+
+  &__link--2 {
+      
+    &:link,
+    &:visited {
+      color: $color-secondary!important;
+    } 
+
+    &:hover,
+    &:active {
+      color: $color-secondary-light!important;
+    }
+
+  }
+
+  &__background--2 {
+      background-color: $color-primary!important;
+  }
+
+}
+
+
+/**
+
+.header__title--2 {
+  color: $color-primary!important;
+}
+
 .hero { 
   &__paragraph {
   margin-top: 5rem;
@@ -109,3 +252,5 @@
   }
 
 }
+
+**/
